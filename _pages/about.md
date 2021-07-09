@@ -12,6 +12,8 @@ Acerca de mi
 ======
 Actualmente soy estudiante de 7° semestre de la carrera de Ingeniería Física en la [Facultad de Ciencias Físico Matemáticas](http://www.mate.uadec.mx/) de la Universidad Autónoma de Coahuila. 
 
+Mis principales áreas de interes son la física computacional 
+
 Sitio Web 
 ======
 Esta pagina fue creada mediante una plantilla de páginas de Github para sitios web académicos. Para mayor información consulte el siguiente enlace: [academicpages](https://github.com/academicpages/academicpages.github.io)
