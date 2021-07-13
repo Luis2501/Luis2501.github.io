@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Métodos numéricos para físicos &#8212; Métodos numéricos para físicos</title>
+    <title>2. Solución de ecuaciones no lineales &#8212; Métodos numéricos para físicos</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,9 +49,12 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Preliminares" href="Preliminares.html" />
+    <link rel="next" title="2.1. Método de bisección" href="M%C3%A9todo%20de%20bisecci%C3%B3n.html" />
+    <link rel="prev" title="1.1. Series de Taylor" href="Series%20de%20Taylor.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,13 +85,13 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
    Métodos numéricos para físicos
   </a>
  </li>
 </ul>
-<ul class="nav bd-sidenav">
+<ul class="current nav bd-sidenav">
  <li class="toctree-l1 has-children">
   <a class="reference internal" href="Preliminares.html">
    1. Preliminares
@@ -106,11 +109,11 @@
    </li>
   </ul>
  </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Soluci%C3%B3n%20de%20ecuaciones%20no%20lineales.html">
+ <li class="toctree-l1 current active has-children">
+  <a class="current reference internal" href="#">
    2. Solución de ecuaciones no lineales
   </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
   <label for="toctree-checkbox-2">
    <i class="fas fa-chevron-down">
    </i>
@@ -169,9 +172,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/Solución de ecuaciones no lineales.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -189,7 +192,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2FSolución de ecuaciones no lineales.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -205,6 +208,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/Solución de ecuaciones no lineales.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -218,18 +238,40 @@
         
               <div>
                 
-  <div class="section" id="metodos-numericos-para-fisicos">
-<h1>Métodos numéricos para físicos<a class="headerlink" href="#metodos-numericos-para-fisicos" title="Permalink to this headline">¶</a></h1>
-<p>Este pequeño libro digital contiene <strong>notas</strong> de la clase de métodos numéricos impartida por la M.C. María Guadalupe Godina Cubillo a los alumnos de Ingeniería Física en la <a class="reference external" href="http://www.mate.uadec.mx/">Facultad de Ciencias Físico Matemáticas</a> de la Universidad Autónoma de Coahuila.</p>
-<p>El proposito principal de este libro es que sirva como apoyo a dichos alumnos. Sin embargo también puede ser de utilidad alguna otra persona interesada en el tema.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Preliminares.html">1. Preliminares</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Soluci%C3%B3n%20de%20ecuaciones%20no%20lineales.html">2. Solución de ecuaciones no lineales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">3. Content with notebooks</a></li>
-</ul>
+  <div class="section" id="solucion-de-ecuaciones-no-lineales">
+<h1><span class="section-number">2. </span>Solución de ecuaciones no lineales<a class="headerlink" href="#solucion-de-ecuaciones-no-lineales" title="Permalink to this headline">¶</a></h1>
+<p>En este capítulo abordaremos uno de los problemas básicos de los métodos numéricos. Si consideramos una función continua <span class="math notranslate nohighlight">\(f(x) \in C[a,b]\)</span>, el problema de encontrar las raíces de esta función consiste en buscar los valores <span class="math notranslate nohighlight">\(x=x_0\)</span> para los cuales se cumple que:</p>
+<div class="math notranslate nohighlight">
+\[f(x_0) = 0\]</div>
+<p>donde el número <span class="math notranslate nohighlight">\(x=x_0\)</span> que hace que se cumpla la condición, se conoce como la raíz de la ecuación <span class="math notranslate nohighlight">\(f(x)\)</span> ó cero de la función <span class="math notranslate nohighlight">\(f(x)\)</span>. El problema de encontrar las raíces de una ecuación es uno de los más importantes problemas computacionales.</p>
+<br>
+<blockquote>
+<div><p><strong>Definición:</strong> Un función <span class="math notranslate nohighlight">\(f(x)\)</span> es una función lineal si satisface las siguientes propiedades:
+$<span class="math notranslate nohighlight">\(f(x+y)=f(x)+f(y)\)</span><span class="math notranslate nohighlight">\(
+\)</span><span class="math notranslate nohighlight">\(f(\alpha x) = \alpha f(x)\)</span>$
+Si esto no se cumple, entonces se dice que la función es no lineal.</p>
+</div></blockquote>
+<br>
+Dicho de otra manera, una función lineal es aquella que tiene la forma de un polinomio de primer grado, es decir las incógnitas no estan elevadas a potencias ni multiplicadas entre sí. Por ejemplo, las funciones
+<div class="math notranslate nohighlight">
+\[ 3x+3y=4, \qquad \qquad 3x -5y+7z=9\]</div>
+<p>\noindent son funciones lineales. En cambio, las funciones</p>
+<div class="math notranslate nohighlight">
+\[x^2+x = 2, \qquad \qquad x+sin^2 x + e^x =0\]</div>
+<p>no son funciones lineales.</p>
+<br>
+<p>Debemos notar que la solución de la ecuación <span class="math notranslate nohighlight">\(f(x) = 0\)</span> puede ser muy difícil dependiendo de la naturaleza de <span class="math notranslate nohighlight">\(f(x)\)</span>. Por ejemplo, si <span class="math notranslate nohighlight">\(f(x)\)</span> es un polinomio de grado mayor o igual que 4, o bien no es polinómica, no hay ninguna fórmula conocida de solución. Por ejemplo, el caso de un polinomio de grado 2, sabemos que la solución está dado por</p>
+<div class="math notranslate nohighlight">
+\[x=\frac{-b \pm \sqrt{b^2-4ac}}{2a}\]</div>
+<p>Así, salvo pocas excepciones, no es posible encontrar expresiones analíticas para hallar las raíces. Ante esto, surge la  necesidad de usar métodos numéricos.</p>
+<div class="admonition-nota admonition">
+<p class="admonition-title">Nota</p>
+<p>En Python es muy sencillo definir función de la forma <span class="math notranslate nohighlight">\(f(x)\)</span>, para esto podemos utilizar la función <em>lambda</em>. Por ejemplo, para expresar <span class="math notranslate nohighlight">\(f(x) = x^2 + x +5 \)</span>, debemos escribir,</p>
+<p><code class="docutils literal notranslate"><span class="pre">f</span> <span class="pre">=</span> <span class="pre">lambda</span> <span class="pre">x:</span> <span class="pre">x*x</span> <span class="pre">+</span> <span class="pre">x</span> <span class="pre">+</span> <span class="pre">5</span></code></p>
+<p>Este código puede reproducirlo para cualquier función <span class="math notranslate nohighlight">\(f(x)\)</span>.</p>
 </div>
-<p>Por el momento el libro digital sigue en construcción.</p>
+<div class="toctree-wrapper compound">
+</div>
 </div>
 
     <script type="text/x-thebe-config">
@@ -257,7 +299,8 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="Preliminares.html" title="next page"><span class="section-number">1. </span>Preliminares</a>
+    <a class='left-prev' id="prev-link" href="Series%20de%20Taylor.html" title="previous page"><span class="section-number">1.1. </span>Series de Taylor</a>
+    <a class='right-next' id="next-link" href="M%C3%A9todo%20de%20bisecci%C3%B3n.html" title="next page"><span class="section-number">2.1. </span>Método de bisección</a>
 
         </div>
         

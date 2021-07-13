@@ -5,7 +5,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Métodos numéricos para físicos &#8212; Métodos numéricos para físicos</title>
+    <title>1.1 Método de bisección &#8212; Métodos numéricos para físicos</title>
     
   <link href="_static/css/theme.css" rel="stylesheet" />
   <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
@@ -49,9 +49,10 @@
         const thebe_selector_output = ".output"
     </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Preliminares" href="Preliminares.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="docsearch:language" content="en" />
     
@@ -82,50 +83,16 @@
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
     <div class="bd-toc-item active">
         <ul class="nav bd-sidenav">
- <li class="toctree-l1 current">
-  <a class="reference internal" href="#">
-   Métodos numéricos para físicos
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Notas de métodos numéricos para físicos
   </a>
  </li>
 </ul>
 <ul class="nav bd-sidenav">
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Preliminares.html">
-   1. Preliminares
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
-  <label for="toctree-checkbox-1">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="Series%20de%20Taylor.html">
-     1.1. Series de Taylor
-    </a>
-   </li>
-  </ul>
- </li>
- <li class="toctree-l1 has-children">
-  <a class="reference internal" href="Soluci%C3%B3n%20de%20ecuaciones%20no%20lineales.html">
-   2. Solución de ecuaciones no lineales
-  </a>
-  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
-  <label for="toctree-checkbox-2">
-   <i class="fas fa-chevron-down">
-   </i>
-  </label>
-  <ul>
-   <li class="toctree-l2">
-    <a class="reference internal" href="M%C3%A9todo%20de%20bisecci%C3%B3n.html">
-     2.1. Método de bisección
-    </a>
-   </li>
-  </ul>
- </li>
  <li class="toctree-l1">
   <a class="reference internal" href="notebooks.html">
-   3. Content with notebooks
+   1. Content with notebooks
   </a>
  </li>
 </ul>
@@ -169,9 +136,9 @@
         <!-- ipynb file if we had a myst markdown file -->
         
         <!-- Download raw file -->
-        <a class="dropdown-buttons" href="_sources/intro.md"><button type="button"
+        <a class="dropdown-buttons" href="_sources/1.1 Método de bisección.ipynb"><button type="button"
                 class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
-                data-placement="left">.md</button></a>
+                data-placement="left">.ipynb</button></a>
         <!-- Download PDF via print -->
         <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
             onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
@@ -189,7 +156,7 @@
                 data-toggle="tooltip" data-placement="left" title="Source repository"><i
                     class="fab fa-github"></i>repository</button></a>
         <a class="issues-button"
-            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2Fintro.html&body=Your%20issue%20content%20here."><button
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F1.1 Método de bisección.html&body=Your%20issue%20content%20here."><button
                 type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
                 title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
         
@@ -205,6 +172,23 @@
 
             <!-- Launch buttons -->
 
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/1.1 Método de bisección.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
         </div>
 
         <!-- Table of contents -->
@@ -218,18 +202,10 @@
         
               <div>
                 
-  <div class="section" id="metodos-numericos-para-fisicos">
-<h1>Métodos numéricos para físicos<a class="headerlink" href="#metodos-numericos-para-fisicos" title="Permalink to this headline">¶</a></h1>
-<p>Este pequeño libro digital contiene <strong>notas</strong> de la clase de métodos numéricos impartida por la M.C. María Guadalupe Godina Cubillo a los alumnos de Ingeniería Física en la <a class="reference external" href="http://www.mate.uadec.mx/">Facultad de Ciencias Físico Matemáticas</a> de la Universidad Autónoma de Coahuila.</p>
-<p>El proposito principal de este libro es que sirva como apoyo a dichos alumnos. Sin embargo también puede ser de utilidad alguna otra persona interesada en el tema.</p>
-<div class="toctree-wrapper compound">
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="Preliminares.html">1. Preliminares</a></li>
-<li class="toctree-l1"><a class="reference internal" href="Soluci%C3%B3n%20de%20ecuaciones%20no%20lineales.html">2. Solución de ecuaciones no lineales</a></li>
-<li class="toctree-l1"><a class="reference internal" href="notebooks.html">3. Content with notebooks</a></li>
-</ul>
-</div>
-<p>Por el momento el libro digital sigue en construcción.</p>
+  <div class="section" id="metodo-de-biseccion">
+<h1>1.1 Método de bisección<a class="headerlink" href="#metodo-de-biseccion" title="Permalink to this headline">¶</a></h1>
+<p>Es el método más elemental y antiguo para determinar las raíces de una ecuación. Este método se basa en el <strong>Teorema de Bolzano</strong>.</p>
+<p>Consideremos una ecuación de tipo <span class="math notranslate nohighlight">\(f(x) = 0\)</span>, de donde <span class="math notranslate nohighlight">\(f(x)\)</span> es una función continua. entonces, puede interpretarse como una condición suficiente para la existencia de soluciones de ese tipo de ecuaciones. Si podemos garantizar la existencia de dos puntos <span class="math notranslate nohighlight">\(x_1\)</span> y <span class="math notranslate nohighlight">\(x_2\)</span> para los cuales <span class="math notranslate nohighlight">\(f(x)\)</span> sea continua en el intervalo <span class="math notranslate nohighlight">\([x_1, x_2]\)</span> y <span class="math notranslate nohighlight">\(f(x_1) \cdot f(x_2) &lt; 0\)</span>, entonces podemos concluir que existe una solución de la ecuación <span class="math notranslate nohighlight">\(f(x) = 0\)</span> en el intervalo anterior.</p>
 </div>
 
     <script type="text/x-thebe-config">
@@ -257,7 +233,6 @@
         
         <div class='prev-next-bottom'>
             
-    <a class='right-next' id="next-link" href="Preliminares.html" title="next page"><span class="section-number">1. </span>Preliminares</a>
 
         </div>
         
