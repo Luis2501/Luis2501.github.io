@@ -1,22 +1,17 @@
 ---
 title: "Notas de métodos numéricos para físicos"
 collection: teaching
-type: "Undergraduate course"
+type: "Facultad de Ciencias Físico Matemáticas"
 permalink: /teaching/2014-spring-teaching-1
-venue: "University 1, Department"
+venue: "Universidad Autónoma de Coahuila"
 date: 2021-08-01
 location: "City, Country"
 ---
 
-This is a description of a teaching experience. You can use markdown like any other post.
+<div style="text-align: justify">
+Este pequeño libro digital contiene notas de la clase de métodos numéricos impartida por la M.C. María Guadalupe Godina Cubillo a los alumnos de Ingeniería Física en la Facultad de Ciencias Físico Matemáticas de la Universidad Autónoma de Coahuila.
+</div>
 
-Heading 1
-======
+[Libro digital](NMN/html/index.html)
 
-<a href="NMN/html/index.html">Libro digital</a>
-
-Heading 2
-======
-
-Heading 3
-======
+<!--<a href="NMN/html/index.html">Libro digital</a>-->
