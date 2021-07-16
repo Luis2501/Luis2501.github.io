@@ -1,0 +1,584 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1.2 Series de Taylor &#8212; Métodos numéricos para físicos</title>
+    
+  <link href="_static/css/theme.css" rel="stylesheet" />
+  <link href="_static/css/index.c5995385ac14fb8791e8eb36b4908be2.css" rel="stylesheet" />
+
+    
+  <link rel="stylesheet"
+    href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/sphinx-book-theme.acff12b8f9c144ce68a297486a2fa670.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    
+  <link rel="preload" as="script" href="_static/js/index.1c5a1a01449ed65a7b51.js">
+
+    <script id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/togglebutton.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script >var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="_static/sphinx-book-theme.12a9622fbb08dcb3a2a40b2c02b83a57.js"></script>
+    <script async="async" src="https://unpkg.com/thebelab@latest/lib/index.js"></script>
+    <script >
+        const thebe_selector = ".thebe"
+        const thebe_selector_input = "pre"
+        const thebe_selector_output = ".output"
+    </script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["\\(", "\\)"]], "displayMath": [["\\[", "\\]"]], "processRefs": false, "processEnvironments": false}})</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Capítulo 2. Solución de ecuaciones no lineales" href="Cap%C3%ADtulo%202.%20Soluci%C3%B3n%20de%20ecuaciones%20no%20lineales.html" />
+    <link rel="prev" title="Capítulo 1. Preliminares" href="Cap%C3%ADtulo%201.%20Preliminares.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="en" />
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<div class="col-12 col-md-3 bd-sidebar site-navigation show" id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="index.html">
+      
+      <img src="_static/logo.png" class="logo" alt="logo">
+      
+      
+      <h1 class="site-logo" id="site-title">Métodos numéricos para físicos</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search this book..." aria-label="Search this book..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+    <div class="bd-toc-item active">
+        <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="intro.html">
+   Métodos numéricos para físicos
+  </a>
+ </li>
+</ul>
+<ul class="current nav bd-sidenav">
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="Cap%C3%ADtulo%201.%20Preliminares.html">
+   Capítulo 1. Preliminares
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     1.2 Series de Taylor
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="Cap%C3%ADtulo%202.%20Soluci%C3%B3n%20de%20ecuaciones%20no%20lineales.html">
+   Capítulo 2. Solución de ecuaciones no lineales
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+  <label for="toctree-checkbox-2">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="2.1%20M%C3%A9todo%20de%20bisecci%C3%B3n.html">
+     2.1 Método de bisección
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="notebooks.html">
+   Content with notebooks
+  </a>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Powered by <a href="https://jupyterbook.org">Jupyter Book</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            
+            <button id="navbar-toggler" class="navbar-toggler ml-0" type="button" data-toggle="collapse"
+                data-toggle="tooltip" data-placement="bottom" data-target=".site-navigation" aria-controls="navbar-menu"
+                aria-expanded="true" aria-label="Toggle navigation" aria-controls="site-navigation"
+                title="Toggle navigation" data-toggle="tooltip" data-placement="left">
+                <i class="fas fa-bars"></i>
+                <i class="fas fa-arrow-left"></i>
+                <i class="fas fa-arrow-up"></i>
+            </button>
+            
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="_sources/1.2 Series de Taylor.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.ipynb</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+            onClick="window.print()" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Connect with source repository"><i class="fab fa-github"></i></button>
+    <div class="dropdown-buttons sourcebuttons">
+        <a class="repository-button"
+            href="https://github.com/executablebooks/jupyter-book"><button type="button" class="btn btn-secondary topbarbtn"
+                data-toggle="tooltip" data-placement="left" title="Source repository"><i
+                    class="fab fa-github"></i>repository</button></a>
+        <a class="issues-button"
+            href="https://github.com/executablebooks/jupyter-book/issues/new?title=Issue%20on%20page%20%2F1.2 Series de Taylor.html&body=Your%20issue%20content%20here."><button
+                type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip" data-placement="left"
+                title="Open an issue"><i class="fas fa-lightbulb"></i>open issue</button></a>
+        
+    </div>
+</div>
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn"
+        aria-label="Launch interactive content"><i class="fas fa-rocket"></i></button>
+    <div class="dropdown-buttons">
+        
+        <a class="binder-button" href="https://mybinder.org/v2/gh/executablebooks/jupyter-book/master?urlpath=tree/docs/1.2 Series de Taylor.ipynb"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Launch Binder" data-toggle="tooltip"
+                data-placement="left"><img class="binder-button-logo"
+                    src="_static/images/logo_binder.svg"
+                    alt="Interact on binder">Binder</button></a>
+        
+        
+        
+        
+    </div>
+</div>
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serie-de-maclaurin-de-e-x">
+   Serie de Maclaurin de
+   <span class="math notranslate nohighlight">
+    \(e^{x}\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serie-de-maclaurin-de-cos-x">
+   Serie de Maclaurin de
+   <span class="math notranslate nohighlight">
+    \(\cos(x)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#serie-de-maclaurin-de-sin-x">
+   Serie de Maclaurin de
+   <span class="math notranslate nohighlight">
+    \(\sin(x)\)
+   </span>
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#aplicaciones-de-las-series-de-taylor">
+   Aplicaciones de las series de Taylor
+  </a>
+  <ul class="nav section-nav flex-column">
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#formula-de-euler">
+     Fórmula de Euler
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#movimiento-en-caida-libre">
+     Movimiento en caida libre
+    </a>
+   </li>
+   <li class="toc-h3 nav-item toc-entry">
+    <a class="reference internal nav-link" href="#rotaciones">
+     Rotaciones
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+        
+              <div>
+                
+  <p><a class="reference internal image-reference" href="index.html"><img alt="Métodos numéricos para físicos" class="align-left" src="portada.png" style="width: 105px;" align="left"/></a></p>
+<p><em>Este cuaderno contiene un extracto de  las notas de la clase de métodos numéricos impartida por la M.C. María Guadalupe Godina Cubillo a los alumnos de Ingeniería Física en la Facultad de Ciencias Físico Matemáticas de la Universidad Autónoma de Coahuila.</em></p>
+<p><em>Este libro intercativo en línea fue escrito por <a class="reference external" href="https://luis2501.github.io/">Luis Eduardo Sánchez González</a>.  Este material está sujeto a los términos y condiciones de la licencia <a class="reference external" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons CC BY-NC-SA 4.0</a>. Se permite el uso gratuito para cualquier propósito no comercial. El código se publica bajo la <a class="reference external" href="https://opensource.org/licenses/MIT">licencia MIT</a>. </em></p>
+<hr class="docutils" />
+<div class="section" id="series-de-taylor">
+<h1>1.2 Series de Taylor<a class="headerlink" href="#series-de-taylor" title="Permalink to this headline">¶</a></h1>
+<p>Supongamos tener una función arbitraría <span class="math notranslate nohighlight">\(f(x)\)</span> e intentaremos hacer es aproximar a la función <span class="math notranslate nohighlight">\(f\)</span> con un polinomio, al cual le agregaremos más sumandos.</p>
+<div class="margin sidebar">
+<p class="sidebar-title">Función <span class="math notranslate nohighlight">\(f(x)\)</span> arbitraria</p>
+<img src="Taylor.png">
+Para aproximar $f(x)$ supondremos que existe $f(0)$ y además $f^{n}(0)$
+</div>
+<p>Para esto supongamos que <span class="math notranslate nohighlight">\(f(0)\)</span> existe, como se muestra en la figura anterior, además que la función es derivable n veces, y que <span class="math notranslate nohighlight">\(f^{(n)} (0)\)</span> también existe, es decir que existen los siguientes números</p>
+<div class="math notranslate nohighlight">
+\[f(0), f'(0), f''(0), f'''(0), ... \]</div>
+<p>Aqui surge una pregunta, ¿Cómo podemos aproximar esto con polinomios que van aumentando en longitud?</p>
+<p>Empezemos con un polinomio constante, es decir un polinomio de grado 0, es sencillo,</p>
+<div class="math notranslate nohighlight">
+\[P(0) = f(0) \qquad \Rightarrow \qquad P(x) = f(0) \]</div>
+<p>Este polinomio <span class="math notranslate nohighlight">\(P\)</span> solo coincide en un punto con la función <span class="math notranslate nohighlight">\(f\)</span>, por lo que no es muy buena aproximación. Si además también queremos que</p>
+<div class="math notranslate nohighlight">
+\[P'(0) = f'(0)\]</div>
+<p>Entonces el polinomio lo podemos escribir como</p>
+<div class="math notranslate nohighlight">
+\[P(x) = f(0) + f'(0) x\]</div>
+<p>Sin perder la primera restricción esto se puede hacer, ya que si tomamos</p>
+<div class="math notranslate nohighlight">
+\[P(0) = f(0)\]</div>
+<p>y</p>
+<div class="math notranslate nohighlight">
+\[P'(0) = f'(0)\]</div>
+<p>podemos observar que se cumplen las condiciones. Ya tenemos una mejor aproximación, dado que el polinomio <span class="math notranslate nohighlight">\(P\)</span> coincide en dos puntos, pero sigue sin ser una excelente aproximación.</p>
+<p>Ahora, propondremos que el polinomio sea</p>
+<div class="math notranslate nohighlight">
+\[P(x) = f(0) + f'(0) x + \frac{1}{2} f''(0) x^2\]</div>
+<p>No es muy difícil observar que</p>
+<div class="math notranslate nohighlight">
+\[P(0) = f(0), \qquad P'(0) = f'(0), \qquad P''(0) = f''(0)\]</div>
+<p>Más puntos coinciden, esto implica que cada vez el polinomio se parece más a <span class="math notranslate nohighlight">\(f(x)\)</span>. También debemos notar que existe un patrón al ir agregando ciertos términos, así, podemos aproximar a <span class="math notranslate nohighlight">\(f(x)\)</span> a un polinomio de grado <span class="math notranslate nohighlight">\(n\)</span> tal que</p>
+<div class="math notranslate nohighlight">
+\[P(x) = f(0) + f'(0) x + \frac{1}{2} f''(0) x^2 + \frac{1}{3!} f'''(0) x^3 + ... + \frac{1}{n!} f^{(n)} (0) x^n\]</div>
+<p>Con este polinomio</p>
+<p>También una función <span class="math notranslate nohighlight">\(f(x)\)</span> puede escribirse como un polinomio de Taylor, es decir como una serie que se trunca, así</p>
+<div class="math notranslate nohighlight">
+\[ f(x) = P_{n} (x) + R_{n} (x) \]</div>
+<p>donde</p>
+<div class="math notranslate nohighlight">
+\[ P_{n} (x) = f(x_{0}) + f'(x_{0})(x - x_{0}) + \dfrac{f&quot;(x_{0})(x -x_{0})^{2}}{2!} + \cdots + \dfrac{f^{(n)}(x_{0})(x - x_{0})^{n}}{n!}\]</div>
+<div class="math notranslate nohighlight">
+\[= \sum_{k=0}^{n} \dfrac{f^{(k)}(x_{0})(x - x_{0})^{k}}{k!}\]</div>
+<p>y</p>
+<div class="math notranslate nohighlight">
+\[R_{n} (x) = \dfrac{f^{(n+1)}(\varepsilon (x)) (x - x_{0})^{n+1}}{(n+1)!} \]</div>
+<p>se le conoce como el <strong>residuo</strong> del polinomio.</p>
+<div class="section" id="serie-de-maclaurin-de-e-x">
+<h2>Serie de Maclaurin de <span class="math notranslate nohighlight">\(e^{x}\)</span><a class="headerlink" href="#serie-de-maclaurin-de-e-x" title="Permalink to this headline">¶</a></h2>
+<p>Para obtener la serie de Maclaurin de <span class="math notranslate nohighlight">\(f(x) = e^{x}\)</span>, debemos considerar la derivada <span class="math notranslate nohighlight">\(n\)</span>-esima de <span class="math notranslate nohighlight">\(f\)</span>, pero sabemos que la derivada de la exponencial siempre es la misma exponencial, entonces</p>
+<div class="math notranslate nohighlight">
+\[f^{n} (x) = e^{x}\]</div>
+<p>y evaluando en cero se tiene</p>
+<div class="math notranslate nohighlight">
+\[f^{n} (0) = e^{0} = 1\]</div>
+<p>Esto implica que la serie de Taylor de <span class="math notranslate nohighlight">\(e^{x}\)</span> se escribe como</p>
+<div class="math notranslate nohighlight">
+\[e^{x} = 1 + x + \frac{x^2}{2!} + \frac{x^3}{3!} + \frac{x^4}{4!} + \frac{x^5}{5!}\]</div>
+<p>es decir que</p>
+<div class="math notranslate nohighlight">
+\[e^{x} = \sum_{k = 0} ^{\infty} \frac{x^{k}}{k!}\]</div>
+<p>podriamos decir que es la serie más sencilla de obtener debido a esa característica en su derivada.</p>
+</div>
+<div class="section" id="serie-de-maclaurin-de-cos-x">
+<h2>Serie de Maclaurin de <span class="math notranslate nohighlight">\(\cos(x)\)</span><a class="headerlink" href="#serie-de-maclaurin-de-cos-x" title="Permalink to this headline">¶</a></h2>
+<p>Considerando la función <span class="math notranslate nohighlight">\(f(x) = \cos(x)\)</span></p>
+</div>
+<div class="section" id="serie-de-maclaurin-de-sin-x">
+<h2>Serie de Maclaurin de <span class="math notranslate nohighlight">\(\sin(x)\)</span><a class="headerlink" href="#serie-de-maclaurin-de-sin-x" title="Permalink to this headline">¶</a></h2>
+<p>Dada la función <span class="math notranslate nohighlight">\(f(x) = \sin(x)\)</span></p>
+<p>Estos resultados podemos observarlos en la siguiente gráfica. La cual muestra los primeros 10 polinomios de Taylor de las funciones antes mencionadas.</p>
+<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="Taylor.html" height="525" width="100%"></iframe></div>
+<div class="section" id="aplicaciones-de-las-series-de-taylor">
+<h2>Aplicaciones de las series de Taylor<a class="headerlink" href="#aplicaciones-de-las-series-de-taylor" title="Permalink to this headline">¶</a></h2>
+<p>Las series de Taylor y en particular las series de Maclaurin pueden tener múltiples aplicaciones tanto en matemáticas como en física. Para ilustrar esto se seleccionaron algunos ejemplos de aplicación que pueden ser útiles.</p>
+<div class="section" id="formula-de-euler">
+<h3>Fórmula de Euler<a class="headerlink" href="#formula-de-euler" title="Permalink to this headline">¶</a></h3>
+<p>La fórmula de Euler, es quizás una de las ecuaciones más famosas en las matemáticas, la cual se escribe de la siguiente forma:</p>
+<div class="math notranslate nohighlight">
+\[e^{ix} = \cos(x) + i \sin(x)\]</div>
+<p>donde <span class="math notranslate nohighlight">\(i\)</span> es la unidad imaginaria, es decir <span class="math notranslate nohighlight">\(i = \sqrt{-1}\)</span>. Esta fórmula puede demostrarse mediante series de Taylor, en particular series de Maclaurin de ciertas funciones conocidas.</p>
+<p>Para demostrar la fórmula de Euler, debemos considerar la serie de Maclaurin de <span class="math notranslate nohighlight">\(e^x\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[e^{x} = 1 + x + \dfrac{x^{2}}{2!} + \dfrac{x^{3}}{3!} + \dfrac{x^{4}}{4!} + \dfrac{x^{5}}{5!} + \dfrac{x^{6}}{6!} + ... \]</div>
+<p>Así, si en lugar de <span class="math notranslate nohighlight">\(e^x\)</span> tomamos <span class="math notranslate nohighlight">\(e^{ix}\)</span> tendremos que</p>
+<div class="math notranslate nohighlight">
+\[e^{ix} = 1 + ix + \dfrac{(ix)^{2}}{2!} + \dfrac{(ix)^{3}}{3!} + \dfrac{(ix)^{4}}{4!} + \dfrac{(ix)^{5}}{5!} + \dfrac{(ix)^{6}}{6!} + ... \]</div>
+<p>Por lo que, elevando la <span class="math notranslate nohighlight">\(i\)</span> en cada uno de los términos, se tendra lo siguiente,</p>
+<div class="math notranslate nohighlight">
+\[e^{ix} = 1 + ix - \dfrac{x^{2}}{2!} - \dfrac{ix^{3}}{3!} + \dfrac{x^{4}}{4!} + \dfrac{ix^{5}}{5!} - \dfrac{x^{6}}{6!} + ... \]</div>
+<p>Ahora, si separamos la parte real y la parte imaginaria,</p>
+<div class="math notranslate nohighlight">
+\[e^{ix} = 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} + ix - \dfrac{ix^{3}}{3!} + \dfrac{ix^{5}}{5!}  + ... \]</div>
+<p>y para visualizar mejor reescribimos de la siguiente manera</p>
+<div class="math notranslate nohighlight">
+\[e^{ix} = \left( 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} + ... \right) + i \left( x - \dfrac{x^{3}}{3!} + \dfrac{x^{5}}{5!}  + ... \right)\]</div>
+<p>Por último, debemos observar que la parte real es la serie de Maclaurin de <span class="math notranslate nohighlight">\(\cos(x)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\cos(x) = 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} + \dfrac{x^{8}}{8!} + ... \]</div>
+<p>Y que la parte imaginaria es la serie de Maclaurin de <span class="math notranslate nohighlight">\(\sin(x)\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[\sin(x) = x - \dfrac{x^{3}}{3!} + \dfrac{x^{5}}{5!} - \dfrac{x^{7}}{7!} + \dfrac{x^{9}}{9!} + ... \]</div>
+<p>Por lo tanto, obtenemos que</p>
+<div class="math notranslate nohighlight">
+\[e^{ix} = \cos(x) + i \sin(x)\]</div>
+<p>Que es lo que queriamos demostrar. Apartir de esta fómula podemos llegar a lo que se conoce como la <strong>identidad de Euler</strong>, por algunos considera una belleza de las matemáticas. Si en la fórmula de Euler tomamos <span class="math notranslate nohighlight">\(x= \pi\)</span>, se tiene</p>
+<div class="math notranslate nohighlight">
+\[e^{i \pi} = -1\]</div>
+<p>Por lo tanto,</p>
+<div class="math notranslate nohighlight">
+\[e^{i\pi} + 1 = 0\]</div>
+<p>Como hemos dicho, esta identidad es considerada una belleza matemática, y esto se debe a que esta identidad vincula números de distintas áreas de las matemáticas que parecen distintas y sin relación alguna a simple vista.</p>
+</div>
+<div class="section" id="movimiento-en-caida-libre">
+<h3>Movimiento en caida libre<a class="headerlink" href="#movimiento-en-caida-libre" title="Permalink to this headline">¶</a></h3>
+<p>Cuando dejamos caer un objeto desde cierta altura <span class="math notranslate nohighlight">\(y_0\)</span>, el movimiento puede ser descrito mediante una de las ecuaciones más conocidas en física básica,</p>
+<div class="math notranslate nohighlight">
+\[y(t) = y_{0} + v_{0}t - \dfrac{1}{2} g t^{2}\]</div>
+<p>Y dado que dejamos caer el objeto, la velocidad <span class="math notranslate nohighlight">\(v_{0} = 0\)</span>, entonces decimos que</p>
+<div class="math notranslate nohighlight">
+\[y(t) = y_{0} - \dfrac{1}{2}g t^{2}\]</div>
+<p>Esta fórmula puede demostrarse mediante series de Taylor. Resulta que cuando dejamos caer un objeto de una cierta altura <span class="math notranslate nohighlight">\(y_{0}\)</span>, entonces la aceleración a la que estará sujeta el objeto es</p>
+<div class="math notranslate nohighlight">
+\[a = y''(t) = -g\]</div>
+<p>tenemos una ecuación diferencial. Si ya sabes cómo resolver ecuaciones diferenciales, seguramente esta ecuación te parecera trivial. Sin embargo en esta ocasión intentaremos darle un enfoque distinto.</p>
+<p>Sabemos que <span class="math notranslate nohighlight">\(y(0) = y_{0}\)</span> es la altura a la que se deja caer el objeto y además <span class="math notranslate nohighlight">\(v = y'(0) = 0\)</span>. Por medio de series de Taylor sabemos que podemos expresar la función <span class="math notranslate nohighlight">\(y\)</span> de la siguiente manera</p>
+<div class="math notranslate nohighlight">
+\[y(t) = \dfrac{y(0)(t - 0)^{0}}{0!} + \dfrac{y'(0)(t - 0)^{1}}{1!} + \dfrac{y''(0)(t - 0)^{2}}{2!} + ... \]</div>
+<p>truncando la serie para tres términos y tomando en cuenta las condiciones que se presentaron, la expresión se puede reducir a</p>
+<div class="math notranslate nohighlight">
+\[y(t) = y_{0} + \dfrac{y''(0)t^{2}}{2}  \]</div>
+<p>Y como sabemos cual es el valor de <span class="math notranslate nohighlight">\(y''(0)\)</span>, entonces</p>
+<div class="math notranslate nohighlight">
+\[y(t) =  y_{0} - \dfrac{1}{2}g t^{2}\]</div>
+<p>que es la expresión a la que sabiamos teniamos que llegar.</p>
+</div>
+<div class="section" id="rotaciones">
+<h3>Rotaciones<a class="headerlink" href="#rotaciones" title="Permalink to this headline">¶</a></h3>
+<p>Las series de Taylor también son capaces de explicar las rotaciones, esas trasnformaciones que muy seguramente viste en álgebra lineal. Para comenzar supongamos tener dos números complejos,</p>
+<div class="math notranslate nohighlight">
+\[z = x + iy \qquad \wedge \qquad w = a + ib\]</div>
+<p>recordemos que la multiplicación de dos números es de la siguiente manera</p>
+<div class="math notranslate nohighlight">
+\[z \cdot w = (x + iy)(a + ib) = (x a - y b) + i(x b + ay)  \]</div>
+<p>Entonces, sabemos que un número complejo podemos expresarlo en términos de la fórmula de Euler,por lo que, si consideramos un número complejo de módulo unitario se puede escribir como</p>
+<div class="math notranslate nohighlight">
+\[z' = e^{i \theta} = \cos(\theta) + i \sin(\theta) , \qquad 0 \leq \theta \leq 2 \pi\]</div>
+<p>y si multiplicamos este número por <span class="math notranslate nohighlight">\(z\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[z \cdot z' = z \cdot e^{i \theta} = (x \cos\theta - y \sin \theta) + i(x \sin \theta + y \cos \theta) \]</div>
+<p>Para observar de diferente manera esta multiplicación, recordemos que podemos ver al conjunto de los número complejos <span class="math notranslate nohighlight">\(\mathbb{C}\)</span> como <span class="math notranslate nohighlight">\(\mathbb{R} ^{2}\)</span>, es decir que si <span class="math notranslate nohighlight">\(z \in \mathbb{C}\)</span></p>
+<div class="math notranslate nohighlight">
+\[\begin{split}z = \begin{pmatrix}
+\; x \; \\ 
+\; y \;
+\end{pmatrix} \end{split}\]</div>
+<p>Rescribiendo de esta manera <span class="math notranslate nohighlight">\(z \cdot z'\)</span>, tenemos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}z \cdot z' = \begin{pmatrix}
+x \cos\theta - y \sin \theta \\
+x \sin \theta + y \cos \theta
+\end{pmatrix} = \begin{pmatrix}
+ \cos\theta &amp; - \sin \theta \\
+ \sin \theta &amp;  \cos \theta
+\end{pmatrix} \cdot \begin{pmatrix}
+\; x \; \\ 
+\; y \;
+\end{pmatrix} \end{split}\]</div>
+<p>Donde diremos que</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} R = \begin{pmatrix}
+ \cos\theta &amp; - \sin \theta \\
+ \sin \theta &amp;  \cos \theta
+\end{pmatrix}\end{split}\]</div>
+<p>es lo que se conoce como <strong>matriz de rotación</strong>. Si no recuerdas como ocurren las rotaciones te dejo una animación del canal <a class="reference external" href="https://www.youtube.com/channel/UCm_vjtdNgTHzFzkRfItPR-w">3Blue1BrowmClips</a></p>
+<br>
+<iframe width="100%" height="400" src="https://www.youtube.com/embed/Z7JyPYgsefc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<br><p>Más aún importante, debemos observar que <span class="math notranslate nohighlight">\(e^{i \theta}\)</span> nos está describiendo una rotación. Es algo impresionante, ya que si recuerdas tus clases de álgebra lineal, las rotaciones solo ocurrian con matrices y vectores. Para poder entender porque esta expresión es una rotación consideremos tener la siguiente matriz</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A = \begin{pmatrix}
+ 0 &amp; -1 \\
+ 1 &amp;  0
+\end{pmatrix}\end{split}\]</div>
+<p>esta matriz tiene algo muy interesante, ya que</p>
+<div class="math notranslate nohighlight">
+\[\begin{split} A^2 = \begin{pmatrix}
+ -1 &amp; 0 \\
+ 0 &amp;  -1
+\end{pmatrix} = - \begin{pmatrix}
+ 1 &amp; 0 \\
+ 0 &amp; 1
+\end{pmatrix} = - I\end{split}\]</div>
+<p>lo cual es impresionate, debido que <span class="math notranslate nohighlight">\(i^2 = -1\)</span>. Esto nos conduce a preguntarnos, ¿Existira una fórmula de Euler que en lugar de <span class="math notranslate nohighlight">\(i\)</span> tenga <span class="math notranslate nohighlight">\(A\)</span>?, es decir que se cumpla que</p>
+<div class="math notranslate nohighlight">
+\[e^{A \theta} = cos(\theta) + A \sin(\theta)\]</div>
+<p>Y esto resulta que si es posible. Para demostrarlo, tomemos la serie de Taylor de <span class="math notranslate nohighlight">\(e^{A \theta}\)</span>,</p>
+<div class="math notranslate nohighlight">
+\[e^{Ax} = 1 + Ax + \dfrac{(Ax)^{2}}{2!} + \dfrac{(Ax)^{3}}{3!} + \dfrac{(Ax)^{4}}{4!} + \dfrac{(Ax)^{5}}{5!} + \dfrac{(Ax)^{6}}{6!} + ... \]</div>
+<p>Como <span class="math notranslate nohighlight">\(A^{2} = -1\)</span> entonces <span class="math notranslate nohighlight">\(A^{3} = A^{2} A= -A\)</span> y <span class="math notranslate nohighlight">\(A^{4} = A^{2} A^{2} = 1\)</span>, es decir que <span class="math notranslate nohighlight">\(A\)</span> tiene el mismo comportamiento que <span class="math notranslate nohighlight">\(i\)</span>, así</p>
+<div class="math notranslate nohighlight">
+\[e^{Ax} = 1 + Ax - \dfrac{x^{2}}{2!} - \dfrac{Ax^{3}}{3!} + \dfrac{x^{4}}{4!} + \dfrac{Ax^{5}}{5!} - \dfrac{x^{6}}{6!} + ... \]</div>
+<p>Ahora, si separamos la parte real y la parte imaginaria,</p>
+<div class="math notranslate nohighlight">
+\[e^{Ax} = 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} + Ax - \dfrac{Ax^{3}}{3!} + \dfrac{Ax^{5}}{5!}  + ... \]</div>
+<p>y nuevamente para visualizar mejor reescribimos de la siguiente manera</p>
+<div class="math notranslate nohighlight">
+\[e^{Ax} = \left( 1 - \dfrac{x^{2}}{2!} + \dfrac{x^{4}}{4!} - \dfrac{x^{6}}{6!} + ... \right) + A \left( x - \dfrac{x^{3}}{3!} + \dfrac{x^{5}}{5!}  + ... \right)\]</div>
+<p>Por lo tanto se tiene que</p>
+<div class="math notranslate nohighlight">
+\[e^{A \theta} = cos(\theta) + A \sin(\theta)\]</div>
+<p>que de forma matricial tendremos</p>
+<div class="math notranslate nohighlight">
+\[\begin{split}e^{A \theta} = \begin{pmatrix}
+ \cos \theta &amp; 0 \\
+ 0 &amp;  \cos \theta
+\end{pmatrix} + \begin{pmatrix}
+ 0 &amp; - \sin \theta \\
+ \sin \theta &amp;  0
+\end{pmatrix} = \begin{pmatrix}
+ \cos \theta &amp; - \sin \theta \\
+ \sin \theta &amp;  \cos \theta
+\end{pmatrix}\end{split}\]</div>
+<p>Por lo tanto, podemos observar que</p>
+<div class="math notranslate nohighlight">
+\[R = e^{A \theta}\]</div>
+<p>Este resultado es algo muy interesante e impresionante, tenemos dos manera de expresar una rotación, y una de ellas es elevando un número (<span class="math notranslate nohighlight">\(e\)</span>) a una matriz, algo que quizás no habrias pensado hasta ahora.</p>
+</div>
+</div>
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            kernelName: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+              </div>
+              
+        
+        <div class='prev-next-bottom'>
+            
+    <a class='left-prev' id="prev-link" href="Cap%C3%ADtulo%201.%20Preliminares.html" title="previous page">Capítulo 1. Preliminares</a>
+    <a class='right-next' id="next-link" href="Cap%C3%ADtulo%202.%20Soluci%C3%B3n%20de%20ecuaciones%20no%20lineales.html" title="next page">Capítulo 2. Solución de ecuaciones no lineales</a>
+
+        </div>
+        
+        </div>
+    </div>
+    <footer class="footer mt-5 mt-md-0">
+    <div class="container">
+      <p>
+        
+          By Luis Eduardo Sánchez González<br/>
+        
+            &copy; Copyright 2021.<br/>
+      </p>
+    </div>
+  </footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="_static/js/index.1c5a1a01449ed65a7b51.js"></script>
+
+  
+  </body>
+</html>
