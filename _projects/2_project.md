@@ -1,80 +1,32 @@
 ---
 layout: page
-title: project 2
-description: a project with a background image
+title: Quantum electronic transport in 2D systems
+description: Research internship project
 img: assets/img/3.jpg
 importance: 2
-category: work
+category: Research
 ---
 
-Every project has a beautiful feature showcase page.
-It's easy to include images in a flexible 3-column grid format.
-Make your photos 1/3, 2/3, or full width.
+<p  style="text-align: justify"> 
+Projects carried out as part of a research internship at the Autonomous University of Baja California under the supervision of <a href="https://scholar.google.com.mx/citations?user=slRjUA8AAAAJ&hl=es">Dr. Ramon Carrilo Bastos</a> as part of the XXVII Pacific Summer of Scientific and Technological Research 2022 of the <a href="https://www.programadelfin.org.mx/">Delfin program</a>.
+</p>
 
-To give your project a background in the portfolio page, just add the img tag to the front matter like so:
+## About
 
-    ---
-    layout: page
-    title: project
-    description: a project with a background image
-    img: /assets/img/12.jpg
-    ---
+<p  style="text-align: justify"> 
+Graphene has been the subject of a great deal of scientific work, the reason for this is due to its electronic and transport properties. One of these properties is that the electrons in it behave as massless relativistic fermions, described by the Dirac equation; this initiated the study of a new class of materials: two-dimensional materials. 
+</p>
 
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/1.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/3.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    Caption photos easily. On the left, a road goes through a tunnel. Middle, leaves artistically fall in a hipster photoshoot. Right, in another hipster photoshoot, a lumberjack grasps a handful of pine needles.
-</div>
-<div class="row">
-    <div class="col-sm mt-3 mt-md-0">
-        {% include figure.html path="assets/img/5.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    This image can also have a caption. It's like magic.
-</div>
+<p  style="text-align: justify"> 
+Due to the unique properties of graphene, the search for other systems in which electrons behave as massless Dirac fermions has increased in recent years. These kinds of systems, known as Dirac systems, share characteristics such as optical conductivity and high heat capacity, to name a few.
+</p>
 
-You can also put regular text between your rows of images.
-Say you wanted to write a little bit about your project before you posted the rest of the images.
-You describe how you toiled, sweated, *bled* for your project, and then... you reveal its glory in the next row of images.
+<p  style="text-align: justify">
+Among the Dirac systems is Kekulé-distorted graphene, which consists of a periodic distribution of strong and weak bonds in the graphene lattice that causes the unit cell to triple with respect to that of pristine graphene. Another Dirac system is the α-T3 model, which consists of the graphene lattice with the addition of a site in the center of each hexagon which is coupled to neighboring atoms of only one of the sublattices, this model has a band structure identical to that of graphene with the exception that it has an additional band, a flat band.
+</p>
 
+## The α-T₃ model with Kekulé periodicity
 
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-<div class="caption">
-    You can also have artistically styled 2/3 + 1/3 images, like these.
-</div>
-
-
-The code is simple.
-Just wrap your images with `<div class="col-sm">` and place them inside `<div class="row">` (read more about the <a href="https://getbootstrap.com/docs/4.4/layout/grid/">Bootstrap Grid</a> system).
-To make images responsive, add `img-fluid` class to each; for rounded corners and shadows use `rounded` and `z-depth-1` classes.
-Here's the code for the last row of images above:
-
-{% raw %}
-```html
-<div class="row justify-content-sm-center">
-    <div class="col-sm-8 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/6.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-    <div class="col-sm-4 mt-3 mt-md-0">
-        {% include figure.html path="assets/img/11.jpg" title="example image" class="img-fluid rounded z-depth-1" %}
-    </div>
-</div>
-```
-{% endraw %}
+<p  style="text-align: justify">
+Motivated by the Dirac systems mentioned above, we can construct a hybrid model, the α-T3 model with Kekulé periodicity, i.e., the sites at the centers of the hexagons appear with Kekulé periodicity.
+</p>

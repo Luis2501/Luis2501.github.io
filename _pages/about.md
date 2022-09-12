@@ -2,13 +2,15 @@
 layout: about
 title: About
 permalink: /
-subtitle: Physics Engineering Student at UAdeC
+subtitle: Physics Engineering Student
 
 profile:
   align: right
   image: profile_1.png
   image_circular: false # crops the image to make it circular
   address: >
+    <p>FCFM, UAdeC</p>
+    <p>Building A, U.C, 25020</p>
     <p>Saltillo, Coah. Méx.</p>
 
 news: true  # includes a list of news items
@@ -34,7 +36,7 @@ My research interests focus on the application of geometry and topology in physi
 
 Feel free to contact me at my email [lsgm16308@gmail.com](mailto:lsgm16308@gmail.com) or [luis-sanchez@uadec.edu.mx](mailto:luis-sanchez@uadec.edu.mx). 
 
-## About website
+### about website
 
 <p style="text-align:justify">
 The website is not entirely in English, some posts will be in Spanish, depending on the target audience. Posts in Spanish will be tag (SPA). In the future, I hope to separate the website into two, one in English and one in Spanish.
