@@ -25,11 +25,9 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. --> 
 
 <p style="text-align:justify">
-I'm currently a student in 9th semester of the Physics Engineering career at Faculty of Physical-Mathematical Sciences of the Universidad Autónoma de Coahuila. At the moment I'm working in my thesis about quantum geometry in 2D materials under the guidance of <a href="https://www.researchgate.net/profile/Pierre-Pantaleon">PhD. Pierre Anthony Pantaleón</a>. 
-</p>
-
-<p style="text-align:justify">
-My research interests focus on the application of geometry and topology in physics. In particular my main area of interest is the mathematical physics of topological quantum matter. I have strong programming skills in Python and C/C++. I keep on learning continuously and I like to share with others what I have learnt.
+I'm currently a student in 9th semester of the Physics Engineering career at Faculty of Physical-Mathematical Sciences of the Universidad Autónoma de Coahuila. At the moment I'm working in my thesis about quantum geometry in 2D materials under the guidance of <a href="https://www.researchgate.net/profile/Pierre-Pantaleon">PhD. Pierre Anthony Pantaleón</a>. <br><br>
+My research interests focus on theoretical condensed matter physics; mainly on the study of topological properties of 2D materials. However, I am also interested in mathematical physics, in particular in the application of group theory in physics.<br><br>
+In addition, I have strong programming skills in Python and C/C++, which has allowed me to develop technology in scientific computing. I am continuously learning and I like to share with others what I have learned.
 </p>
 
 <!--However, another area of interest and in which I have a bit more experience is scientific computing (numerical analysis, in particular the computational physics).-->
