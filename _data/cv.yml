@@ -60,6 +60,15 @@
 #      institution: University of Zurich, Zurich, Switzerland
 #      year: 1909 - 1911
 
+- title: Certifications
+  type: time_table
+  contents:
+    - title: Lectures on Theoretical Physics:Quantum Field Theory
+      institution: International Centre for Theoretical Physics - Physics Without Frontiers,
+      year: 2022 - 2023
+      description:
+        - Currently I taking the lectures on theoretical physics organized by ICTP for latinoamericans students.
+
 - title: Software Skills
   type: nested_list
   contents:
