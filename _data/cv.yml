@@ -25,7 +25,41 @@
       institution: Universidad Autónoma de Coahuila, Coahuila, México
       year: 2022
       description:
-        - Scientific software development certification
+        - Software development certification
+
+- title: Research experience
+  type: time_table
+  contents:
+    - title: Student of project thesis
+      institution: Facultad de Ciencias Físico Matemáticas, UAdeC and IMDEA Nanoscience
+      year: 2021 - 2023
+#      description:
+#        - Description 1.
+#        - Description 2.
+#        - title: Description 3.
+#          contents:
+#            - Sub-description 1.
+#            - Sub-description 2.
+
+- title: Teaching experience
+  type: time_table
+  contents:
+    - title: Professor of Theoretical Physics
+      institution: Colegio Nacional de Profesionales Técnicos - CONALEP Plantel I
+      year: Oct 2022 - Now
+#      description:
+#        - Description 1.
+#        - Description 2.
+#        - title: Description 3.
+#          contents:
+#            - Sub-description 1.
+#            - Sub-description 2.
+#    - title: Visiting Professor
+#      institution: California Institute of Technology, Pasadena, California, US
+#      year: 1933
+#      description:
+#        - Description 1.
+#        - Description 2.
 
 #- title: Experience
 #  type: time_table
