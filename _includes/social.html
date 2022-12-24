@@ -52,6 +52,9 @@
             {%- if site.stackoverflow_id -%}
             <a href="https://stackoverflow.com/users/{{ site.stackoverflow_id }}" title="Stackoverflow"><i class="fab fa-stack-overflow"></i></a>
             {% endif %}
+            {%- if site.youtube_id -%}
+            <a href="https://www.youtube.com/channel/{{ site.youtube_id }}" title="YouTube"><i class="fab fa-youtube"></i></a>
+            {% endif %}
             {%- if site.rss_icon -%}
             <a href="{{ site.baseurl }}/feed.xml" title="RSS Feed"><i class="fas fa-rss-square"></i></a>
             {% endif %}

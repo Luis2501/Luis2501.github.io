@@ -2,15 +2,14 @@
 layout: about
 title: About
 permalink: /
-subtitle: Physics Engineering Student
+subtitle: Bachelor in Physics
 
 profile:
   align: right
   image: profile_1.png
   image_circular: false # crops the image to make it circular
   address: >
-    <p>Deparment Physics and Mathematics</p>
-    <p>Autonomus University of Coahuila</p>
+    <p>Deparment Physics and Mathematics, UAdeC</p>
     <p>Saltillo, Coah. Méx.</p>
 
 news: true  # includes a list of news items
@@ -25,7 +24,7 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. --> 
 
 <p style="text-align:justify">
-I'm currently a student in 9th semester of the B.Sc. in Physics Engineering at Deparment of Physics and Mathematics of the Autonomus University of Coahuila. At the moment I'm working in my thesis about quantum geometry in 2D materials under the guidance of <a href="https://www.researchgate.net/profile/Pierre-Pantaleon">Dr. Pierre Anthony Pantaleón</a>. <br><br>
+Currently I'm working in my thesis about quantum geometry in 2D materials under the guidance of <a href="https://www.researchgate.net/profile/Pierre-Pantaleon">Dr. Pierre Anthony Pantaleón</a>. <br><br>
 My research interests focus on theoretical condensed matter physics; mainly on the study of topological properties of 2D materials. However, I am also interested in mathematical physics, in particular in the application of geometry and topology in physics.<br><br>
 In addition, I have strong programming skills in Python and C/C++, which has allowed me to develop technology in scientific computing. I am continuously learning and I like to share with others what I have learned.
 </p>

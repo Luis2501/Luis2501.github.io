@@ -21,11 +21,13 @@
 #          contents:
 #            - Sub-description 1.
 #            - Sub-description 2.
+    - title: Bachelor's degree in Mathematics
+      institution: Universidad Abierta y a Distancia de México (UnADM), México
+      year: 2022 - Now
     - title: Bachelor's degree in Physics Engineering
       institution: Universidad Autónoma de Coahuila, Coahuila, México
-      year: 2022
-      description:
-        - Software development certification
+      year: 2017 - 2022
+
 
 - title: Research experience
   type: time_table
