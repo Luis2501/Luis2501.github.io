@@ -4,7 +4,7 @@ title: Quantum electronic transport in 2D systems
 description: Research internship project
 img: assets/img/3.jpg
 importance: 2
-category: Research
+category: Condensed Matter Physics
 ---
 
 <p  style="text-align: justify"> 

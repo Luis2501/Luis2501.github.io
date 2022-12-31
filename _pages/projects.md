@@ -5,7 +5,7 @@ permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
 nav_order: 2
-display_categories: [Research, work, fun]
+display_categories: [Condensed Matter Physics, Computational Physics, Education and Science Outreach]
 horizontal: false
 ---
 
