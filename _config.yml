@@ -10,9 +10,8 @@ email: lsgm16308@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
   A simple, whitespace theme for academics. Based on [*folio](https://github.com/bogoli/-folio) design.
 footer_text: >
-  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme.
-  Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>.
-  Last update on October 26, 2022.
+  Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/alshedivat/al-folio">al-folio</a>.
+  Last update on January 21, 2023.
 keywords: jekyll, jekyll-theme, academic-website, portfolio-website  # add your own keywords or leave empty
 
 lang: en # the language of your site (for example: en, fr, cn, ru, etc.)
@@ -70,7 +69,7 @@ og_image: # The site-wide (default for all links) Open Graph preview image
 github_username: luis2501 # your GitHub user name
 gitlab_username: # your GitLab user name
 twitter_username: # your Twitter handle
-linkedin_username: # your LinkedIn user name
+linkedin_username: luis-eduardo-sanchez-gonzalez # your LinkedIn user name
 scholar_userid: # your Google Scholar ID
 orcid_id: # your ORCID ID
 medium_username: # your Medium username
@@ -86,7 +85,7 @@ stackoverflow_id: #your stackoverflow id
 youtube_id: UC3IDElXb7LxDBoaP3wT9zZg
 
 contact_note: >
-  You can even add a little note about which of these is the best way to reach you.
+  Feel free to contact me at my email luis-sanchez [at] uadec.edu.mx or lsgm16308 [at] gmail.com 
 
 # -----------------------------------------------------------------------------
 # Analytics and search engine verification

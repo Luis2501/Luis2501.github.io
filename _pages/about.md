@@ -2,7 +2,7 @@
 layout: about
 title: About
 permalink: /
-subtitle: Bachelor in Physics
+subtitle: B.Sc. in Physics 
 
 profile:
   align: right
@@ -31,10 +31,9 @@ In addition, I have strong programming skills in Python and C/C++, which has all
 
 <!--However, another area of interest and in which I have a bit more experience is scientific computing (numerical analysis, in particular the computational physics).-->
 
-Feel free to contact me at my email [lsgm16308@gmail.com](mailto:lsgm16308@gmail.com) or [luis-sanchez@uadec.edu.mx](mailto:luis-sanchez@uadec.edu.mx). 
-
 ### about website
 
 <p style="text-align:justify">
-The website is not entirely in English, some posts will be in Spanish, depending on the target audience. Posts in Spanish will be tag (SPA). In the future, I hope to separate the website into two, one in English and one in Spanish.
+This page was created using a <a href="https://pages.github.com/" target="_blank">GitHub Pages</a> template for academic website. Fore more information you can consult the following link: <a href="https://github.com/alshedivat/al-folio">al-folio</a>. <br><br>
+The website is not entirely in English. Some posts will be in Spanish, depending on the target audience. Posts in Spanish will be tagged: (🇲🇽). In the future, the idea is to separate the website into  English and Spanish version.
 </p>
