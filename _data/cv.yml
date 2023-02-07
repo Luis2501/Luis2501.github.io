@@ -21,9 +21,9 @@
 #          contents:
 #            - Sub-description 1.
 #            - Sub-description 2.
-    - title: Bachelor's degree in Mathematics
-      institution: Universidad Abierta y a Distancia de México (UnADM), México
-      year: 2022 - Now
+#    - title: Bachelor's degree in Mathematics
+#      institution: Universidad Abierta y a Distancia de México (UnADM), México
+#      year: 2022 - Now
     - title: Bachelor's degree in Physics Engineering
       institution: Universidad Autónoma de Coahuila, Coahuila, México
       year: 2017 - 2022
@@ -157,10 +157,10 @@
 - title: Memberships and ORCID
   type: nested_list
   contents:
-    - title: Scientific societies
-      items: 
-        - Sociedad Mexicana de Matemáticas (Member student) 
-        - American Physical Society (Member student) 
+#    - title: Scientific societies
+#      items: 
+#        - Sociedad Mexicana de Matemáticas (Member student) 
+#        - American Physical Society (Member student) 
     - title: ORCID iD
       items:
         - 0000-0001-9523-7980
