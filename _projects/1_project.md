@@ -1,8 +1,8 @@
 ---
 layout: page
 title: Quantum geometry in 2D materials
-description: Bachelor's thesis project
-img: assets/img/12.jpg
+description: Together with IMDEA Nanoscience
+img: assets/img/publication_preview/thesisprofile.png 
 importance: 1
 category: Condensed Matter Physics
 ---

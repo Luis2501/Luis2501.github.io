@@ -27,8 +27,13 @@
     - title: Bachelor's degree in Physics Engineering
       institution: Universidad Autónoma de Coahuila, Coahuila, México
       year: 2017 - 2022
-
-
+      description:
+        - Class rank 1 (GPA 3.6) and Laureate Thesis.
+        - title: Thesis project (Laureate) "Quantum geometry in two-dimensional materials".
+          contents:
+            - Abstract. Detailed study of the electronic and topological properties of graphene-like systems.
+            - Supervisor. Dr. Pierre A. Pantaleon Peralta and Dr. Carlos E. Rodriguez Garcia
+                    
 - title: Research experience
   type: time_table
   contents:
