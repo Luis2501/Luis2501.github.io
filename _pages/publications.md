@@ -2,8 +2,8 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: <b>This is only a test of jekyll-scholar, not are my publications.<b>
-years: [1967, 1956, 1950, 1935, 1905, 2022]
+description: Publications in reversed chronological order.
+years: [2023]
 thesis: [Thesis]
 nav: true
 nav_order: 1
