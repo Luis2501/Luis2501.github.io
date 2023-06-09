@@ -179,12 +179,35 @@
           {%- if entry.website %}
             <a href="{{ entry.website }}" class="btn btn-sm z-depth-0" role="button">Website</a>
           {%- endif %}
+          {%- if entry.more %}
+            <a class="more btn btn-sm z-depth-0" role="button">More Info</a>
+          {%- endif %}
+          {%- if entry.test %}
+            <a class="test btn btn-sm z-depth-0" role="button">Test</a>
+          {%- endif %}
           </div>
 
           {% if entry.abstract -%}
           <!-- Hidden abstract block -->
           <div class="abstract hidden">
             <p>{{ entry.abstract }}</p>
+          </div>
+          {%- endif -%}
+          
+          {%- if entry.test -%}
+	  <div class="test modal">
+             <label class="test modal__bg" for="modal-1"></label>
+                <div class="test modal__inner">
+           <label class="test modal__close" for="modal-1"></label>
+          <p>{{ entry.test }}</p>
+         </div>
+	 </div>
+	 {%- endif -%}
+          
+          {% if entry.more -%}
+          <!-- Hidden more information block -->
+          <div class="more hidden">
+            <p>{{ entry.more }}</p>
           </div>
           {%- endif -%}
 
