@@ -24,39 +24,50 @@
 #    - title: Bachelor's degree in Mathematics
 #      institution: Universidad Abierta y a Distancia de México (UnADM), México
 #      year: 2022 - Now
+    - title: Master in Science
+      institution: Universidad Autónoma de Baja California, Ensenada, México
+      year: 2023 - 2025
+      description:
+        - <b>Advisor:</b> Dr. Ramón Carrillo Bastos
     - title: Bachelor's degree in Physics Engineering
       institution: Universidad Autónoma de Coahuila, Coahuila, México
       year: 2017 - 2022
       description:
-        - Class rank 1 (GPA 3.6) and Laureate Thesis.
-        - title: Thesis project (Laureate) "Quantum geometry in two-dimensional materials".
+        - (GPA 3.6).
+        - title: <b>Thesis project:</b> "Quantum geometry in two-dimensional materials".
           contents:
-            - Abstract. Detailed study of the electronic and topological properties of graphene-like systems.
-            - Supervisor. Dr. Pierre A. Pantaleon Peralta and Dr. Carlos E. Rodriguez Garcia
+            - <b>Abstract:</b> Detailed study of the electronic and topological properties of graphene-like systems.
+            - <b>Supervisor:</b> Dr. Pierre A. Pantaleon Peralta and Dr. Carlos E. Rodriguez Garcia
                     
 - title: Research experience
   type: time_table
   contents:
-    - title: Student of project thesis
+    - title: Thesis research project
       institution: Facultad de Ciencias Físico Matemáticas, UAdeC and IMDEA Nanoscience
       year: 2021 - 2023
-#      description:
-#        - Description 1.
-#        - Description 2.
+      description:
+        - Supervised by Dr. Pierre Anthony Pantaleon Peralta
+        - I performed in geometric and topological propierties of 2D materials. We calculated the metric tensor, Berry phase of topological graphene-like systems and we characterize the different topological phases
 #        - title: Description 3.
 #          contents:
 #            - Sub-description 1.
 #            - Sub-description 2.
+    - title: Summer Intership
+      institution: Facultad de Ciencias Físico Matemáticas, UAdeC and IMDEA Nanoscience
+      year: May 2022 -<br> Ago 2022
+      description:
+        - Supervised by Dr. Ramón Carrillo Bastos
+        - I worked on Dirac systems. We proposed a hybrid model called ”Kekulé-modulated α-T3 model” and we calculate an analytical expression for the dispersion relation.
 
 - title: Teaching experience
   type: time_table
   contents:
     - title: High School Teacher
       institution: Colegio Nacional de Profesionales Técnicos - CONALEP Plantel I
-      year: Oct 2022 - Now
-#      description:
-#        - Description 1.
-#        - Description 2.
+      year: Oct 2022 -<br> Feb 2023
+      description:
+        - <i>Calculus & Physics</i>
+        - I taught classes for last-year High School students.
 #        - title: Description 3.
 #          contents:
 #            - Sub-description 1.
@@ -147,14 +158,14 @@
 #      items: 
 #        - Max Planck Medal
 
-- title: Academic Interests
+- title: General Academic Interests
   type: nested_list
   contents:
     - title: Condensed Matter Physics
       items: 
         - Topological phases of matter
         - Dirac materials
-    - title: Education of science
+    - title: Science education
       items:
         - Mathematics
         - Scientific computing
