@@ -2,21 +2,11 @@
 layout: page
 permalink: /publications/
 title: Publications
-description: Publications in reversed chronological order.
-years: [2023]
-thesis: [Thesis]
-nav: true
+description: All publications listed from newest to oldest
+years: [2025]
+nav: false
 nav_order: 1
 ---
-
-<div class="publications">
-
-{%- for y in page.thesis %}
-  <h2 class="year">{{y}}</h2>
-  {% bibliography -f others %} 
-{% endfor %}
-
-</div>
 
 <!-- _pages/publications.md -->
 <div class="publications">

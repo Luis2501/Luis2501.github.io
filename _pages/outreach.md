@@ -1,8 +1,8 @@
 ---
 layout: page
-title: others
-nav: false
-nav_order: 6
+title: Outreach
+nav: true
+nav_order: 5
 dropdown: true
 children: 
     - title: Linktree

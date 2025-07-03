@@ -1,13 +1,17 @@
 ---
 layout: page
-title: Programación en Python
-description: FCFM, UAdeC
+title: Python Programming
+description: Facultad de Ciencias Físico Matemáticas, Universidad Autónoma de Coahuila
 img: assets/img/3.jpg
 importance: 1
 category: Courses
 ---
 
+**NOTE:** This courses I was taught in spanish (🇲🇽)
+
 <button name="Curso" class="btn"><img align = "left" alt = "Python" width = "15px" src = "https://cdn.jsdelivr.net/npm/simple-icons@3.13.0/icons/python.svg"/> &nbsp; <a style="text-decoration:none; color: gray" href="Curso_Online/index.html">Curso Online</a> </button> 
+
+**Dates:**  
 
 ## Índice
 * [Acerca del curso](#item1)

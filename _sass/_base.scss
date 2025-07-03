@@ -136,6 +136,13 @@ blockquote {
   border-bottom: 1px solid var(--global-divider-color);
   background-color: var(--global-bg-color);
   opacity: 0.95;
+  // display: flex; /* Flexbox para organizar los elementos */
+  // justify-content: center; /* Centrar elementos horizontalmente */
+  // flex-wrap: wrap; /* Permitir múltiples líneas si hay demasiados elementos */
+  //max-width: 100%; /* Evitar que se salga de los límites del contenedor */
+  // padding: 10px; /* Espaciado interno */
+  //margin: 0 auto; /* Centrar el navbar en el contenedor principal */
+  //gap: 15px; /* Espaciado entre los elementos */ 
 }
 .navbar .dropdown-menu {
   background-color: var(--global-bg-color);

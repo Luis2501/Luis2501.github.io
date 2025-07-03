@@ -5,7 +5,7 @@ title: Teaching
 description: Materials for courses you taught. Replace this text with your description.
 nav: true
 display_categories: [Teaching assisting, Courses, Workshops]
-nav_order: 5
+nav_order: 2
 horizontal: false
 ---
 
