@@ -2,14 +2,14 @@
 layout: about
 title: About
 permalink: /
-subtitle: Master's student • B.Sc. in Physics 
+subtitle: M.Sc. in Physics • B.Sc. in Engineering Physics 
 
 profile:
   align: right
   image: profile.jpg
   image_circular: false # crops the image to make it circular
   address: >
-    <p style="font-size: 15px;">Deparment of Physics <br> Faculty of Science | U.A.B.C <br> Ensenada, B.C., MX </p>
+    <p style="font-size: 15px;">Department of Electrical <br> and Electronic Engineering <br> TecNM / ITS <br> Saltillo, Coah., MX </p>
 
 news: true  # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
@@ -23,15 +23,17 @@ Put your address / P.O. box / other info right below your picture. You can also 
 Link to your social media connections, too. This theme is set up to use [Font Awesome icons](http://fortawesome.github.io/Font-Awesome/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them. --> 
 
 <p style="text-align:justify">
-I’m master's student in Prof. Ramón Carrillo-Bastos’s theory group, part of the <b>Quantum Transport and Optical Phenomena</b> Research Group at the Faculty of Science, UABC.<br><br>
+I am a physicist working at the intersection of condensed matter physics, quantum materials, and semiconductor technologies. I hold an M.Sc. in Physics from the Universidad Autónoma de Baja California (UABC), where I worked in the Quantum Transport and Optical Phenomena research group under the supervision of Prof. Ramón Carrillo-Bastos.<br><br>
 
-My research focuses on theoretical condensed matter physics, particularly on the electronic, optical, and topological properties of two-dimensional quantum materials. I combine analytical and numerical techniques to study systems such as graphene, Dirac materials and topological insulators. <br><br>
+My research focuses on the electronic, optical, and topological properties of low-dimensional quantum materials, combining analytical methods and numerical simulations. My work includes graphene and Dirac materials, Kekulé-modulated systems, quantum geometry, and topological phenomena.
 
-Alongside my academic work, I have strong technical skills in Python and C/C++, with experience in scientific computing and data analysis. I'm constantly learning new tools and enjoy sharing knowledge through teaching, mentoring, and science communication.<br><br>
+Currently, I work in the field of semiconductor engineering and characterization, with interests spanning electronic materials, semiconductor devices, data acquisition, and computational modeling. I am particularly interested in the connection between fundamental physics and emerging quantum technologies.
 
-I'm currently preparing for a PhD in physics and also developing skills relevant to data science and AI, aiming to contribute in academia and industry.<br><br>
+I am also passionate about physics education, scientific programming, and science communication. I develop computational tools and educational materials using Python and C/C++, and I enjoy teaching physics and mathematics from both conceptual and computational perspectives.
 
-🔬 Theoretical Physics · 🧑‍🏫 Teaching · 📢 Outreach · 💻 Scientific Programming · 📈 Data Science
+My broader interests include quantum materials, semiconductor physics, quantum technologies, computational physics, and physics education.
+
+🔬 Quantum Materials · ⚛️ Condensed Matter · 💡 Semiconductors · 🧑‍🏫 Physics Education · 💻 Computational Physics · 📢 Science Communication
 
 
 <!-- If you know more of my research focuses see the Research apart. 
